@@ -1,0 +1,158 @@
+:root {
+  --bg: #f2f4f0;
+  --ink: #1c2a33;
+  --mute: #5d6b73;
+  --line: #cfd6d0;
+  --acc: #1f5f8b;
+  --bad: #b3261e;
+  --paper: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.5 system-ui, sans-serif;
+}
+
+h1, h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  margin: .2em 0 .6em;
+}
+
+a {
+  color: var(--acc);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.2rem;
+  align-items: center;
+  padding: .8rem 1.5rem;
+  background: var(--ink);
+}
+
+nav a {
+  color: #e8efe9;
+  text-decoration: none;
+}
+
+nav a.active {
+  border-bottom: 2px solid #8fc1e3;
+}
+
+nav .sp {
+  flex: 1;
+}
+
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: .8rem;
+}
+
+form.stack {
+  display: grid;
+  gap: .7rem;
+  max-width: 460px;
+}
+
+label {
+  display: grid;
+  gap: .2rem;
+  font-size: .9rem;
+  color: var(--mute);
+}
+
+input, textarea, select {
+  font: inherit;
+  padding: .5rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--ink);
+}
+
+button, .btn {
+  font: inherit;
+  padding: .45rem .9rem;
+  border: 1px solid var(--acc);
+  background: var(--acc);
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button.alt {
+  background: transparent;
+  color: var(--acc);
+}
+
+button.danger {
+  background: var(--bad);
+  border-color: var(--bad);
+}
+
+button:disabled {
+  opacity: .5;
+}
+
+:focus-visible {
+  outline: 3px solid #8fc1e3;
+  outline-offset: 2px;
+}
+
+.err {
+  color: var(--bad);
+}
+
+.ok {
+  color: #1b6b3a;
+}
+
+.mute {
+  color: var(--mute);
+}
+
+.row {
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.row.between {
+  justify-content: space-between;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper);
+}
+
+td, th {
+  border-bottom: 1px solid var(--line);
+  padding: .5rem;
+  text-align: left;
+  font-size: .92rem;
+}
+
+.scroll {
+  overflow-x: auto;
+}
